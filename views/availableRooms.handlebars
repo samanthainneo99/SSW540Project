@@ -5,7 +5,7 @@
         a {text-align: center; color : #c1bfc0;}
         p {text-align: center; color : #b30d39;}
     </style>
-
+{{!-- This is the grey inner box containing the number of available rooms  --}}
 <body>
     <div style = "background-color:#c1bfc0; 
        width:125px; 
@@ -16,6 +16,7 @@
        z-index:2;
        font-family: Helvetica; font-size: 20px;">
                Available Rooms: 
+    {{!-- This is the actual number of rooms, received from data\getAPI.js numAvailableRooms --}}
     <div
     style = "position:relative; 
        top: 20px; 
@@ -27,7 +28,7 @@
     
     </div>
 
-    
+    {{!-- This is the border box --}}
     <div style = "background-color:#b30d39; 
        width:185px; 
        height:210px; 
@@ -39,7 +40,7 @@
 
     </div>
 
-
+    {{!-- This is the link to the booking site --}}
     <a href="https://stevens.libcal.com/reserve/grouprooms" 
         style=" position:relative; 
         top:-25px; 
