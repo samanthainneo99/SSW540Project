@@ -14,7 +14,7 @@ async function getBookings(){
     // These next few lines manipulate the date so it can be properly passed in to the API call
     let currentdate = new Date(new Date().toString().split('GMT')[0]+' UTC').toISOString().substring(0,16);
     let currentdateAPIformat=currentdate.split('T')[0].replaceAll('-',"")
-    const { data } = await axios.get('https://stevens.libcal.com/1.1/space/bookings?date='+currentdateAPIformat,config)
+    const { data } = await axios.get('https://stevens.libcal.com/1.1/space/bookings?eid=12068, 12067, 12069 & date='+currentdateAPIformat,config)
     const mySet1 = new Set();
     for(let i=0;i<data.length;i++){
         if(data[i].cid!=3114) {
